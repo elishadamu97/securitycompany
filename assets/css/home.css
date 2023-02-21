@@ -148,6 +148,7 @@ div.image-page a:hover:after{
 
 .texture{
     color: darkorange;
+    font-size: 40px;
 }
 
 .line{
@@ -155,10 +156,10 @@ div.image-page a:hover:after{
 }
 
 .sample{
-    width: 1100px;
+    width: 1230px;
     min-height: 500px;
     display: flex;
-    margin: 100px 0px 0px 150px;
+    margin: 50px 0px 0px 30px;
     flex-direction: row;
     flex-wrap: wrap;
     border: grey;
@@ -171,7 +172,7 @@ div.image-page a:hover:after{
     width: 300px;
     height: 300px;
     background: #fff;
-    margin: 10px;
+    margin: 50px;
     box-sizing: border-box;
     display: inline-block;
     box-shadow: 2px 2px 15px 3px rgb(206, 222, 226);
@@ -242,6 +243,9 @@ h4{
     color: #ffffff;
     padding-left: 20px;
     margin-bottom: 50px;
+}
+.columns{
+    color: rgba(255, 255, 255, 0.65) !important;
 }
 .copy{
     padding-bottom: 20px;
