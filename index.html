@@ -5,8 +5,9 @@
         <link rel="stylesheet" href="./assets/css/home.css">
         <link rel="stylesheet" href="./assets/css/bootstrap.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
-        <link rel="shortcut icon" href="./assets/img/security-camera-128.ico" type="image/x-icon">
-        <script type="text/javascript" src="grid.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link rel="shortcut icon" href="./assets/img/IMG-20230221-WA0004.jpg" type="image/x-icon">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>              
     </head>
@@ -14,12 +15,12 @@
         <div class="sticky">
             <div class="main">
                 <div class="logo">
-                    <a href="#"><img class="image" src="./assets/img/77073262-letter-m-security-logo.webp" alt="logo"></a>
+                    <a href="./index.html"><img class="image" src="./assets/img/IMG-20230221-WA0004.jpg" alt="logo"></a>
                 </div>
                 <div class="nav-bar">
-                    <a class="index" href="./index.html">Home</a>
-                    <a class="contactus" href="./contactpage.html">Contact Us</a>
-                    <a class="aboutus" href="./aboutus.html">About Us</a>
+                    <a class="index" href="./index.html"><i class="fas fa-home"></i> Home</a>
+                    <a class="contactus" href="./applypage.html"><i class="fas fa-mouse"></i> Apply</a>
+                    <a class="aboutus" href="./about-us.html"><i class="fas fa-user-tie"></i> About Us</a>
                 </div>
                 <div class="search-icon">
                     <form class="d-flex" role="search">
@@ -48,8 +49,44 @@
                 <h2>MASTER-EYE SECURITY</h2>
                 <br>
                 <h5>SERVICES LTD.</h5>
-                <a class="button-img" href="#"><span><i class="fas fa-search"></i>  APPLY</span></a>
+                <a class="button-img" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" href="#"><span><i class="fas fa-address-card"></i>  Contact Us</span></a>
             </div>
+           
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Contact Us</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="border: 0px solid white;"></i></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Name:</label>
+            <input type="text" required placeholder="John Doe" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Email:</label>
+            <input type="text"  required placeholder="johndoe@example.com" class="form-control" id="recipient-email">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Phone number:</label>
+            <input type="text"  required placeholder="+2348012345678" class="form-control" id="recipient-phone-num">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control"  required placeholder="Leave a message" id="message-text"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button onclick="messageSent()" type="submit" class="btn btn-primary">Send message</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
         </div>
         <div class="title-head">
             <h3 class="texture">GALLERY</h3>
@@ -149,5 +186,6 @@
             </div>
           
         </footer>
+        <script type="text/javascript" src="./assets/js/index.js"></script>
     </body>
 </html>
