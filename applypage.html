@@ -3,7 +3,6 @@
         <title>Apply Page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./assets/css/home.css">
-        <link rel="stylesheet" href="./assets/css/apply.css">
         <link rel="stylesheet" href="./assets/css/bootstrap.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -14,96 +13,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>              
     </head>
     <style>
-        
-        .header{
-    text-align: center;
-    margin: 20px 0px 30px 0px;
-    color: rgb(11, 129, 184);
-}
-.line{
-    margin: 0px 20px 0px 20px;
-    font-size: 5px;
-    border: 1px solid rgb(155, 198, 219);
-    box-shadow: 10px 10px 20px rgb(204, 226, 255);
-
-}
-.content-main{
-    box-shadow: 10px 10px 20px rgb(157, 199, 253);
-    width: 1100px;
-    height: 100%;
-    border-radius: 10px;
-    border-left: 1px solid rgb(103, 186, 241);
-    border-top: 1px solid rgb(103, 186, 241);
-    margin-left:86px;
-    margin-top:30px;
-    margin-bottom: 80px;
-
-}
-.header-1{
-    margin-left: 20px;
-    color: rgb(11, 129, 184);
-
-}
-.input-container{  
-    display: flex;
-    width: 100%;
-    margin-bottom: 15px;
-    position: relative;
-  }
-  input:invalid{
-    border: 2px solid rgb(221, 20, 20)
-    !important;
-}
-input:placeholder-shown{
- border: 1px solid rgb(47, 167, 204)
-  !important;
-}
-input:valid{
-    border: 2px solid rgb(25, 201, 25)
-      !important;
-  }
-  
-
-#toggle{
-      position: absolute;
-      transform: translate(0, -50%);
-      margin-top: 19px;
-      margin-left: 330px;
-      font-size: 20px;
-      cursor: pointer;
-  }
-  #toggleCon{
-    position: absolute;
-      transform: translate(0, -50%);
-      margin-top: 30px;
-      margin-left: 330px;
-      font-size: 20px;
-      cursor: pointer;
-  }
-.content-container{
-    display: flex;
-    flex-direction: row-reverse;
-    column-gap: 0px;
-    margin: 10px 0px 0px 0px;
-    justify-content: center;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-.content-image{
-    margin-bottom: 50px;
-    margin-right: 0px;
-}
-.image-signup{
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-}
-.content-signup{
-    margin-top: 70px;
-    margin-left: 50px;  
-    flex-grow: 1;
-}
-
+      
     </style>
     <body>
         <div class="sticky">
@@ -114,7 +24,7 @@ input:valid{
                 <div class="nav-bar">
                     <a class="index" href="./index.html"><i class="fas fa-home"></i> Home</a>
                     <a class="contactus" href="./applypage.html"><i class="fas fa-mouse"></i> Apply</a>
-                    <a class="aboutus" href="./aboutus.html"><i class="fas fa-user-tie"></i> About Us</a>
+                    <a class="aboutus" href="./about-us.html"><i class="fas fa-user-tie"></i> About Us</a>
                 </div>
                 <div class="search-icon">
                     <form class="d-flex" role="search">
@@ -152,21 +62,21 @@ input:valid{
                     <form action="#" method="post">
                         <div class="wrapper">
                             <label for="username"><b>Name:</b></label>
-                            <input  type="text" class="form-control" id="username" name="username" autocomplete="on" placeholder="Example: John Doe" required aria-required="true">
+                            <input  type="text" disabled class="form-control" id="username" name="username" autocomplete="on" placeholder="Example: John Doe" required aria-required="true">
                             <br>
                             <label for="email"><b>Email:</b></label>
-                            <input type="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            <input type="email" disabled pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                             title="login with a valid email" class="form-control" id="email" 
-                            autocomplete="new-password"  placeholder="e.g example123@gmail.com" name="email"  required aria-required="true">
+                            autocomplete="on"  placeholder="e.g example123@gmail.com" name="email"  required aria-required="true">
                             <br>
                             <label for="phone-number"><b>Phone Number:</b></label>
                            <div class="input-container">
-                            <input type="tel" class="form-control" name="phone-number" id="phone-number" autocomplete="on" placeholder="Example: 08012345678"
+                            <input type="tel" disabled class="form-control" name="phone-number" id="phone-number" autocomplete="on" placeholder="Example: 08012345678"
                             title="Phone Number must be a number" pattern="[0-9]{11}" required>
                            </div>
                             <br>
                             <label for="state"><b>State of Origin:</b></label>
-                            <select id="state" required class="form-select" aria-label="Default select example">
+                            <select id="state" disabled required class="form-select" aria-label="Default select example">
                                 <option selected><b>Select State</b></option>
                                 <option value="Abia">Abia</option>
                                 <option value="Adamawa">Adamawa</option>
@@ -210,7 +120,7 @@ input:valid{
                               <br>
                             <div class="mb-3">
                                 <label class="form-label" for="address"><b>Address:</b></label>
-                                <textarea class="form-control" id="address"  placeholder="Please enter your Home/Work Address" required></textarea>
+                                <textarea disabled class="form-control" id="address"  placeholder="Please enter your Home/Work Address" required></textarea>
                             </div>
                             
                             
@@ -227,13 +137,18 @@ input:valid{
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                      <h5><p>By clicking on proceed</p>
-                                        <p>You are agreeing to a 2000 naira Payment</p></h5>
-                                        
+                                        <h4>SET OF INSTRUCTIONS</h4>
+                                        <hr>
+                                        <ul>
+                                            <li>Make sure your internet connection is good</li>
+                                            <li>Use a laptop/desktop to proceed</li>
+                                            <li>Do not close the tab after Payment</li>
+                                            <li>Wait to be redirected to a new link after payment</li>
+                                        </ul>    
                                     </div>
                                     <div class="modal-footer">
                                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                                   <a href="#"  rel="noopener noreferrer"> <button type="button" class="btn btn-info">Proceed</button></a>
+                                   <a href="https://paystack.com/pay/mastereyesecurity" target="_blank"  rel="noopener noreferrer"> <button type="button" class="btn btn-info">Proceed</button></a>
                                     </div>
                                 </div>
                                 </div>
@@ -242,15 +157,15 @@ input:valid{
                               <br>
                               <div  id="hiddenSubmit" style="display: visible;">
                                 <div class="form-check">
-                                    <input class="form-check-input" required type="checkbox" value="" id="flexCheckDefault">
+                                    <input class="form-check-input" disabled required type="checkbox" value="" id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
-                                        Accept <a href="#">Terms and Conditions</a>
+                                        Accept <a href="#" aria-disabled="true">Terms and Conditions</a>
                                     </label>
                                     <br>
                                     <br>
                                     
                                   </div>
-                                 <a href="./assets/img/application-form.pdf" type="application/octet-stream"  target="_blank" download="file"><button  onclick="successMessage()" type="submit" name="submit" class="btn btn-success">Submit</button></a>
+                                 <a ><button disabled aria-disabled="true"  onclick="successMessage()" type="submit" name="submit" class="btn btn-success">Submit</button></a>
                               </div>
                               <br>
                             <br>

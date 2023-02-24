@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url("about-us.css");
+@import url("apply.css");
+*{
+    box-sizing: border-box;
+}
 body{
     background-color: rgb(255, 255, 255);
     margin: 0;
@@ -10,7 +15,6 @@ body{
     top: 0;
     z-index: 9;
     background-color: #ffffff;
-
 }
 div .main{
     display: grid;
@@ -56,8 +60,7 @@ div .main{
     width: 200px;
     border: 1px solid black;
     border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-    
+    border-top-left-radius: 10px; 
     font-size: 15px;
 }
 .search-icon{
@@ -70,7 +73,6 @@ div .main{
     margin-top: 5px;
     margin-left: 30px;
 }
-
 .image-page{
     position: relative;
 } 
@@ -117,12 +119,10 @@ div.image-page a{
     transition: all .35s;
     opacity: 2;
   }
-  
   div.image-page a span{
     position: relative;
     z-index: 2;
   }
-  
   div.image-page a:after{
     position: absolute;
     content: "";
@@ -133,30 +133,24 @@ div.image-page a{
     background: #ffffff;
     transition: all .35s;
   }
-  
   div.image-page a:hover{
     color: rgb(0, 0, 0);
-  }
-  
+  } 
 div.image-page a:hover:after{
     width: 100%;
 }
 /* main content */
-
 .title-head{
     text-align: center;
     padding-top: 50px;  
 }
-
 .texture{
     color: darkorange;
-    font-size: 40px;
+    font-size: 40px !important;
 }
-
 .line{
     border-top: 5px solid #155757;
 }
-
 .sample{
     width: 1230px;
     min-height: 500px;
@@ -166,9 +160,7 @@ div.image-page a:hover:after{
     flex-wrap: wrap;
     border: grey;
     padding-bottom: 200px;
-    
 }
-
 .sample .box{
     position: relative;
     width: 300px;
@@ -178,68 +170,39 @@ div.image-page a:hover:after{
     box-sizing: border-box;
     display: inline-block;
     box-shadow: 2px 2px 15px 3px rgb(206, 222, 226);
-    
+    border: 1px solid rgb(113, 196, 247);
+    border-radius: 5px;   
 }
-
 .sample .box .imgBox{
     position: relative; 
     overflow: hidden;
 }
-
 .sample .box .imgBox img{
-    max-width: 100%;
+    width: 300px;
     height: 220px;
-    transition: transform 1s;
-    
+    transition: transform 1s;   
 }
-
 .sample .box:hover .imgBox img{
     transform: scale(1.2);
 }
-
-.sample .box .details{
-    position: absolute;
-    top: 220px;
-    text-align: center;
-    
+a{
+    text-decoration: none !important;
 }
-
+.details{
+    height: 80px;
+text-align: center;
+background-color: rgb(199, 220, 220);     
+}
 h3{
-    color: rgba(0, 0, 0, 0.65);
+    font-size: 20px !important;
+    padding-top: 15px;
+    text-align: center;
+    text-decoration: none;
 }
 
-h4{
-    color: rgba(0, 0, 0, 0.65);
-}
-
-.windvan{
-    width: 300px;
-}
-
-
-
-.milk{
-    width: 300px;
-}
-.windtext{
-    padding-left: 10px;
-}
-
-.filter{
-    width: 300px; 
-}
-
-.pen{
-    padding: 10px 0px 0px 40px;
-}
-
-.dna{
-    padding: 10px 0px 0px 25px;
-}
 /* footer section */
 .footer1{
     background-color: black;
-   
 }
 .col{
     color: #ffffff;
