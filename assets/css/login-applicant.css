@@ -76,6 +76,7 @@
         .content-image{
             margin-bottom: 50px;
             margin-right: 0px;
+            margin-right: 100px;
         }
         .image-signup{
             width: 100%;
@@ -86,5 +87,6 @@
             margin-top: 70px;
             margin-left: 50px;  
             flex-grow: 1;
+            margin-right: 100px;
         }
         

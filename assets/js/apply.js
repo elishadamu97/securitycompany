@@ -17,3 +17,83 @@
 
       })
 }
+const paymentForm = document.getElementById('paymentForm');
+paymentForm.addEventListener("submit", payWithPaystack, false);
+function payWithPaystack(e) {
+  e.preventDefault();
+  let fname = document.getElementById("fname").value;
+  let surname = document.getElementById("sname").value;
+  let email = document.getElementById("email-address").value;
+  let phonenumber = document.getElementById("phone-number").value;
+  let stateoforigin = document.getElementById("state").value;
+  let address = document.getElementById("address").value;
+  let fullname = fname + surname;
+  let handler = PaystackPop.setup({
+    key: 'pk_test_ab06b0290c1e8eee59851b2da83183479b8e3a73', // Replace with your public key
+    first_name: fullname,
+    last_name: document.getElementById("state").value,
+    email: document.getElementById("email-address").value,
+    amount: document.getElementById("amount").value * 100,
+    phone: document.getElementById("phone-number").value,
+    ref: 'VS'+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+    // label: "Optional string that replaces customer email"
+    onClose: function(){
+      let timerInterval
+      Swal.fire({
+        title: 'Cancelled Payment?',
+        html: 'Payment will be cancelled in <b></b> milliseconds.',
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading()
+          const b = Swal.getHtmlContainer().querySelector('b')
+          timerInterval = setInterval(() => {
+            b.textContent = Swal.getTimerLeft()
+          }, 100)
+        },
+        willClose: () => {
+          clearInterval(timerInterval)
+        }
+      }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
+          console.log('I was closed by the timer')
+        }
+      })
+    },
+    callback: function(response){
+      window.location = "http://localhost/securitycompany/login-applicant.html?reference=" + response.reference;
+      let message = 'Reference: '+ "  "+ response.reference;
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top',
+        showConfirmButton: false,
+        timer: 5000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+      
+      Toast.fire({
+        icon: 'success',
+        title: 'Payment successful' + "<br>" +  message 
+        
+      })
+      var formData = {fname:fname, surname:surname, email: email, phonenumber: phonenumber, stateoforigin: stateoforigin, address:address};
+      $.ajax({
+        url:"http://localhost/securitycompany/connect-database.php",
+        type: "GET",
+        data: formData,
+        success: function (response)
+        {
+
+        }
+      })
+    }
+  });
+  
+ 
+  handler.openIframe();
+}
