@@ -77,25 +77,27 @@ input:valid{
   }
   
             </style>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Name:</label>
-            <input type="text" required placeholder="John Doe" class="form-control" id="recipient-name">
-          </div>
-          <div class="mb-3">
-            <label for="recipient-email" class="col-form-label">Email:</label>
-            <input type="text"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="johndoe@example.com" class="form-control" id="recipient-email">
-          </div>
-          <div class="mb-3">
-            <label for="recipient-phone-num" class="col-form-label">Phone number:</label>
-            <input type="text"  required placeholder="08012345678"  pattern="[0-9]{11}" class="form-control" id="recipient-phone-num">
-          </div>
-          <div class="mb-3">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control"  required placeholder="Leave a message" id="message-text"></textarea>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button onclick="messageSent()" type="submit" class="btn btn-primary">Send message</button>
+          <form action="https://formspree.io/f/mdovzakp" method="post">
+            <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Name:</label>
+                <input type="text" name="name" required placeholder="John Doe" class="form-control" id="recipient-name">
+              </div>
+              <div class="mb-3">
+                <label for="recipient-email" class="col-form-label">Email:</label>
+                <input type="email" name="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="johndoe@example.com" class="form-control" id="recipient-email">
+              </div>
+              <div class="mb-3">
+                <label for="recipient-phone-num" class="col-form-label">Phone number:</label>
+                <input type="text" name="phone"  required placeholder="08012345678"  pattern="[0-9]{11}" class="form-control" id="recipient-phone-num">
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Message:</label>
+                <textarea class="form-control" name="message" required placeholder="Leave a message" id="message-text"></textarea>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button onclick="messageSent()" type="submit" class="btn btn-primary">Send message</button>
+          </form>
         </div>
         </form>
       </div>
@@ -112,10 +114,18 @@ input:valid{
                 <div class="box">
                     <a href="./major-general-oshinowo.html" target="_blank">
                         <div class="imgBox">
-                            <img src="./assets/img/images.jpeg" alt="Major General Oshinowo O. Olayinka">
+                            <img src="./assets/img/gen-oshinowo.jpg" alt="Major General Oshinowo O. Olayinka">
                         </div>
                     <div class="details">
-                        <h3>Major Gen. Oshinowo(Rtd)<br> (Chairman)</h3>
+                        <h3>Major Gen. Oshinowo O. O.(Rtd)<br> (Chairman)</h3>
+                    </div></a>
+                </div>
+                <div class="box">
+                    <a href="#"><div class="imgBox">
+                        <img src="./assets/img/IMG-20230225-WA0003.jpg" alt="Mr Inalegwu John Ocheochi">
+                    </div>
+                    <div class="details">
+                        <h3>Mr Inalegwu John Ocheochi <br>(Chief Executive Officer)</h3>
                     </div></a>
                 </div>
                 <div class="box">
@@ -123,7 +133,7 @@ input:valid{
                         <img src="./assets/img/fotor_2023-2-23_20_12_6.png" alt="Prof. S. Shikyii(SAN)">
                     </div>
                     <div class="details">
-                        <h3>Prof. S. Shikyii(SAN) <br> (Chief Executive Officer)</h3>
+                        <h3>Prof. S. Shikyii(SAN) <br> (Director - Legal)</h3>
                     </div></a>
                 </div>
                 <div class="box">
@@ -159,22 +169,6 @@ input:valid{
                         </div>
                     <div class="details">
                         <h3> Prof. Gladys Belinda Babudoh <br>(Director)</h3>
-                    </div></a>
-                </div>
-                <div class="box">
-                    <a href="#"><div class="imgBox">
-                        <img src="./assets/img/IMG-20230221-WA0024.jpg" alt="Mr Inalegwu John Ocheochi">
-                    </div>
-                    <div class="details">
-                        <h3>Mr Inalegwu John Ocheochi <br>(Head of Operations)</h3>
-                    </div></a>
-                </div>
-                <div class="box">
-                    <a href="#"><div class="imgBox">
-                        <img src="./assets/img/fotor_2023-2-23_20_21_41.png" alt="Major Emmanuel Kazedayet(Rtd)">
-                    </div>
-                    <div class="details">
-                        <h3>Major Emmanuel Kazedayet(Rtd) <br> (Training Director)</h3>
                     </div></a>
                 </div>
                 <div class="box">

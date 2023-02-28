@@ -62,8 +62,9 @@ function payWithPaystack(e) {
       })
     },
     callback: function(response){
-      window.location = "http://localhost/securitycompany/login-applicant.html?reference=" + response.reference;
+      window.location = "http://localhost/securitycompany/login-applicant.php?reference=" + response.reference;
       let message = 'Reference: '+ "  "+ response.reference;
+      let sent_to_database = response.reference;
       const Toast = Swal.mixin({
         toast: true,
         position: 'top',
@@ -81,7 +82,7 @@ function payWithPaystack(e) {
         title: 'Payment successful' + "<br>" +  message 
         
       })
-      var formData = {fname:fname, surname:surname, email: email, phonenumber: phonenumber, stateoforigin: stateoforigin, address:address};
+      var formData = {fname:fname, surname:surname, email: email, phonenumber: phonenumber, stateoforigin: stateoforigin, address:address, sent_to_database:sent_to_database };
       $.ajax({
         url:"http://localhost/securitycompany/connect-database.php",
         type: "GET",
